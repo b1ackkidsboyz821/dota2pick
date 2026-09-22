@@ -1,0 +1,34 @@
+{
+  "name": "dota2pick",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "data:fetch": "node scripts/fetch-opendota.mjs",
+    "data:all": "npm run data:fetch && npm run data:items && npm run data:positions && npm run data:build",
+    "data:items": "node scripts/fetch-item-popularity.mjs",
+    "data:positions": "node scripts/fetch-position-items.mjs",
+    "data:build": "node scripts/build-derived.mjs",
+    "data:check": "node scripts/check-curated.mjs"
+  },
+  "dependencies": {
+    "next": "^16.3.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.6.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2"
+  }
+}
