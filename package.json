@@ -15,7 +15,8 @@
     "data:items": "node scripts/fetch-item-popularity.mjs",
     "data:positions": "node scripts/fetch-position-items.mjs",
     "data:build": "node scripts/build-derived.mjs",
-    "data:check": "node scripts/check-curated.mjs"
+    "data:check": "node scripts/check-curated.mjs",
+    "test": "node scripts/setup.js"
   },
   "dependencies": {
     "next": "^16.3.5",
